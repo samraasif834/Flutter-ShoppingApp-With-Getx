@@ -7,5 +7,8 @@ class ProductController extends GetxController {
 
   void fetchproducts() async {
     var products =await RemoteServices.fetchProducts();
+    if(products !=null){
+      
+    }
   }
 }
