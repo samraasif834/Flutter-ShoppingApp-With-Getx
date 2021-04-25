@@ -6,9 +6,9 @@ class ProductController extends GetxController {
   var productList = <Product>[].obs;
 
   void fetchproducts() async {
-    var products =await RemoteServices.fetchProducts();
-    if(products !=null){
-      
+    var products = await RemoteServices.fetchProducts();
+    if (products != null) {
+      productList.value = products;
     }
   }
 }
