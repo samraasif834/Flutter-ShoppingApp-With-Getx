@@ -16,7 +16,12 @@ class ProductTile extends StatelessWidget {
           Stack(
 children: [
   Container(
-    
+    height: 100,
+    width: double.infinity,
+    clipBehavior: Clip.antiAlias,
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(4),
+    ),
   )
 ],
           )
