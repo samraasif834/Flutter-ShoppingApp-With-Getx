@@ -30,6 +30,7 @@ class Product {
   final String? productApiUrl;
   final String? apiFeaturedImage;
   final List<dynamic>? productColors;
+  var isFavorite = false.obs;
 
   Product({
     this.id,
