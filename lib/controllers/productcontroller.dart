@@ -5,6 +5,12 @@ import 'package:shoppingapp/services/remote_services.dart';
 class ProductController extends GetxController {
   var productList = <Product>[].obs;
 
+  @override
+  void init() {
+    fetchproducts();
+    super.onInit();
+  }
+
   void fetchproducts() async {
     var products = await RemoteServices.fetchProducts();
     if (products != null) {

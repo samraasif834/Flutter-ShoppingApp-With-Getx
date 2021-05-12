@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 import 'package:shoppingapp/controllers/productcontroller.dart';
 import 'package:shoppingapp/models/product.dart';
+import 'package:shoppingapp/views/product_tile.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
 
@@ -48,18 +49,14 @@ class _HomepageState extends State<Homepage> {
                 ],
               )),
           Expanded(
-            child: Obx(()=>
-             StaggeredGridView.countBuilder(
+            child: Obx(
+              () => StaggeredGridView.countBuilder(
                   crossAxisCount: 2,
                   itemCount: productController.productList.length,
                   mainAxisSpacing: 16,
                   crossAxisSpacing: 16,
                   itemBuilder: (context, index) {
-                    return Container(
-                      height: 200,
-                      width: 100,
-                      color: Colors.red,
-                    );
+                    return ProductTile(productController.productList[index]);
                   },
                   staggeredTileBuilder: (index) => StaggeredTile.fit(1)),
             ),
