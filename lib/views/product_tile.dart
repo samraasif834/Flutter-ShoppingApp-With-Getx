@@ -9,7 +9,20 @@ class ProductTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 2,
-      
+      child: Padding(padding: const EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+children: [
+  Container(
+    
+  )
+],
+          )
+        ],
+      ),
+      ),
     );
   }
 }
